@@ -14,7 +14,7 @@ def main():
     wavelet_tree = WaveletTree(file_reader.get_letter())
     print wavelet_tree.track_symbol(1)
     print wavelet_tree.rank_query('$', 45)
-    print wavelet_tree.select_query('$', 1)
+    print wavelet_tree.select_query('e', 1)
     
 if __name__ == '__main__':
     main()
