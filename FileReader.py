@@ -19,7 +19,7 @@ class FileReader(object):
             print "Please give correct arguments"
             sys.exit()
         self.__read_file(params[1])
-    
+    #Read the txt file and create a list from character
     def __read_file(self,filename=None):
         if filename == None:
             return

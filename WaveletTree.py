@@ -12,8 +12,11 @@ class WaveletTree(object):
         if data == None:
             print "Please give correct parameters"            
             return
-        self.root = Note(data)
+        self.root = Note(data)  #Create the parent node
         
+    """
+    Query Functions
+    """    
     def rank_query(self,letter=None, position=None):
         if letter==None or position==None or position <= 0:
             print "Please give correct parameters"
@@ -30,5 +33,7 @@ class WaveletTree(object):
         if position==None or position <= 0:
             print "Please give correct parameters"
             return -1
-        return self.root.get_track_symbol(position)
-        
+        return self.root.get_track_symbol(position) 
+    """
+    Query Functions
+    """   
