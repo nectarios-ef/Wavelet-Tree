@@ -4,7 +4,7 @@ Created on Jun 9, 2014
 @author: nectarios
 '''
 
-from Note import Note
+from Node import Node
 
 class WaveletTree(object):
     
@@ -12,7 +12,7 @@ class WaveletTree(object):
         if data == None:
             print "Please give correct parameters"            
             return
-        self.root = Note(data)  #Create the parent node
+        self.root = Node(data)  #Create the parent node
         
     """
     Query Functions
