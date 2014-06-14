@@ -8,8 +8,8 @@ Reference for the ([Node (RRR)](http://alexbowe.com/wavelet-trees/)) of the Wave
 
 ### Algorithm
 
-- Rank query.
-    Reporting the number of occurrences of a given character in a given prefix of the text)
+###### Rank query.
+Reporting the number of occurrences of a given character in a given prefix of the text)
 - Select query.
 - Track symbol.
 
