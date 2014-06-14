@@ -14,7 +14,7 @@ class FileReader(object):
         '''
         Constructor
         '''
-        self.letter = []
+        self.character = []
         if len(params) < 2:
             print "Please give correct arguments"
             sys.exit()
@@ -28,11 +28,11 @@ class FileReader(object):
                 while True:
                     c = f.read(1)
                     if not c:
-                        print "Read %i letter Successfully" % len(self.letter)
+                        print "Read %i character Successfully" % len(self.character)
                         break
                     if ord(c) == 10:
                         continue                    
-                    self.letter.append(str(c))
+                    self.character.append(str(c))
         except IOError as e:
             print "I/O error({0}): {1}".format(e.errno, e.strerror)
             raise
@@ -40,13 +40,13 @@ class FileReader(object):
             print "Unexpected error:", sys.exc_info()[0]
             raise
 
-    def get_letter(self):
-        if len(self.letter) == 0:
+    def get_characters(self):
+        if len(self.character) == 0:
             return None
-        return self.letter
+        return self.character
 
     def is_read(self):
-        if len(self.letter) == 0:
+        if len(self.character) == 0:
             return False
         return True
 

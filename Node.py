@@ -39,20 +39,20 @@ class Node(object):
     Query Functions
     """   
         
-    def get_rank_query(self,position=None, letter=None):
+    def get_rank_query(self,position=None, character=None):
         if self.__full_size() < position:
             return -1
-        bit = self.__get_bit(letter)
+        bit = self.__get_bit(character)
         position_size = self.__get_rank(position, bit)   #Calculate the rank
         if self.__size() == 2:                           #When the size is 2 then i find leaf and must finish
             return position_size
         if bit:                                          #For true(1) go to the right child, for false(0) go to the left child
-            return self.childern[1].get_rank_query(position_size,letter) 
-        return self.childern[0].get_rank_query(position_size,letter)
+            return self.childern[1].get_rank_query(position_size,character) 
+        return self.childern[0].get_rank_query(position_size,character)
     
-    def get_select_query(self,position=None, letter=None):
-        leaf = self.__get_leaf(letter)                   #Get the leaf where the letter is
-        return leaf.__get_select(position,leaf.bits_data[leaf.data.index(letter)])
+    def get_select_query(self,position=None, character=None):
+        leaf = self.__get_leaf(character)                   #Get the leaf where the character is
+        return leaf.__get_select(position,leaf.bits_data[leaf.data.index(character)])
 
     def get_track_symbol(self,position=None):
         if self.__size() == 2:                           #When the size is 2 then i find leaf and must finish
@@ -119,14 +119,14 @@ class Node(object):
             return rank
         return position - rank
 
-    def __get_leaf(self,letter):        #Get the leaf where the letter is 
-        index = self.data.index(letter)
+    def __get_leaf(self,character):        #Get the leaf where the character is 
+        index = self.data.index(character)
         if self.__size() == 2:
             return self
         value = self.bits_data[index]
         if value:
-            return self.childern[1].__get_leaf(letter)
-        return self.childern[0].__get_leaf(letter)
+            return self.childern[1].__get_leaf(character)
+        return self.childern[0].__get_leaf(character)
     
     def __gen_tree(self):                       #Generate left and right child
         left = []
@@ -164,11 +164,11 @@ class Node(object):
     def __full_size(self):
         return len(self.full_data)
     
-    def __get_bit(self,letter=None):            #Given a letter return if is True(1) or False(0)
-        if letter == None:
-            return letter
+    def __get_bit(self,character=None):            #Given a character return if is True(1) or False(0)
+        if character == None:
+            return character
         for data in self.data:
-            if letter==data:
+            if character==data:
                 return self.bits_data[self.data.index(data)]
         return None
         

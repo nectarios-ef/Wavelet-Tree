@@ -12,28 +12,28 @@ class WaveletTree(object):
         if data == None:
             print "Please give correct parameters"            
             return
-        self.root = Node(data)  #Create the parent node
+        self.__root = Node(data)  #Create the parent node
         
     """
     Query Functions
     """    
-    def rank_query(self,letter=None, position=None):
-        if letter==None or position==None or position <= 0:
+    def rank_query(self,character=None, position=None):
+        if character==None or position==None or position <= 0:
             print "Please give correct parameters"
             return -1
-        return self.root.get_rank_query(position,letter)
+        return self.__root.get_rank_query(position,character)
     
-    def select_query(self,letter=None, position=None):
-        if letter==None or position==None or position <= 0:
+    def select_query(self,character=None, position=None):
+        if character==None or position==None or position <= 0:
             print "Please give correct parameters"
             return -1
-        return self.root.get_select_query(position, letter)
+        return self.__root.get_select_query(position, character)
     
     def track_symbol(self,position=None):
         if position==None or position <= 0:
             print "Please give correct parameters"
             return -1
-        return self.root.get_track_symbol(position) 
+        return self.__root.get_track_symbol(position) 
     """
     Query Functions
     """   
