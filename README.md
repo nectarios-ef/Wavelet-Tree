@@ -17,5 +17,15 @@ Reference for the ([Node-RRR](http://alexbowe.com/wavelet-trees/)) of the Wavele
 
 ### Code
 
-<code>from FileReader import FileReader
-from WaveletTree import WaveletTree</code> 
+```python
+from FileReader import FileReader
+from WaveletTree import WaveletTree
+
+file_reader = FileReader(sys.argv)
+if (not file_reader.is_read()):
+    sys.exit()
+wavelet_tree = WaveletTree(file_reader.get_letter())
+wavelet_tree.rank_query(letter, position)
+wavelet_tree.select_query(letter, position)
+wavelet_tree.track_symbol(position)
+```
