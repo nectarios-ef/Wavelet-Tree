@@ -26,7 +26,7 @@ file_reader = FileReader(sys.argv)
 if (not file_reader.is_read()):
     sys.exit()
 wavelet_tree = WaveletTree(file_reader.get_letter())
-wavelet_tree.rank_query(letter, position)
-wavelet_tree.select_query(letter, position)
+wavelet_tree.rank_query(character, position)
+wavelet_tree.select_query(character, position)
 wavelet_tree.track_symbol(position)
 ```
