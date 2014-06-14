@@ -8,10 +8,10 @@ Reference for the ([Node-RRR](http://alexbowe.com/wavelet-trees/)) of the Wavele
 
 ### Algorithm
 
-###### `Rank query`
+###### Rank query
 Reporting the number of occurrences of a given character in a given prefix of the text)
-###### `Select query`
+###### Select query
 Reporting the position of a given occurrence of a given character
-###### `Track symbol`
+###### Track symbol
 
 <code> wavelet_tree = WaveletTree(file_reader.get_letter()) </code> 
