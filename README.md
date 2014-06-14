@@ -18,6 +18,7 @@ Reference for the ([Node-RRR](http://alexbowe.com/wavelet-trees/)) of the Wavele
 ### Code
 
 ```python
+import sys
 from FileReader import FileReader
 from WaveletTree import WaveletTree
 
