@@ -6,7 +6,7 @@ Created on Jun 9, 2014
 
 BLOCKS_NUM = 3
 BITS_NUM = 5
-SUPER_BLOCK_size = 3
+SUPER_BLOCK_SIZE = 3
 
 class Node(object):
     '''
@@ -194,7 +194,7 @@ class Node(object):
                 rb_counter += 1
             counter += 1
         self.rb.append(rb_counter)
-        while (num_of_super_block < SUPER_BLOCK_size + 1):
+        while (num_of_super_block < SUPER_BLOCK_SIZE + 1):
             self.rs.append(rs_counter)
             num_of_super_block += 1
             
