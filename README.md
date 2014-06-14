@@ -13,5 +13,9 @@ Reference for the ([Node-RRR](http://alexbowe.com/wavelet-trees/)) of the Wavele
 ###### Select query
 `Reporting the position of a given occurrence of a given character.`
 ###### Track symbol
+`Reporting the character of a given position.`
 
-<code> wavelet_tree = WaveletTree(file_reader.get_letter()) </code> 
+### Code
+
+<code>from FileReader import FileReader
+from WaveletTree import WaveletTree</code> 
